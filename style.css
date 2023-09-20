@@ -162,15 +162,23 @@
     
 }
 
-.graph-control-panel button {
+.btn-select {
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: transparent;
     cursor: pointer;
     border: none;
-    padding: 1rem;
-    font-size: 1rem;
-    text-transform: uppercase;
     border-radius: 0.4rem;
+    text-transform: uppercase;
+    font-size: 1rem
+}
+
+.graph-control-panel button {
+    padding: 1rem;
+}
+
+.graph-control-panel button:hover {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: #f1ebeb !important;
+    padding: 1rem;
 }
 
 .table-control {
@@ -204,15 +212,8 @@
 }
 
 .buttons .btn-ocorrencia{
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
     padding: 1.5rem 1.3rem;
-    margin: 0 0.6rem 0.6rem 0;
-    font-size: 1rem;
-    text-transform: uppercase;
-    border-radius: 0.4rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0 0.6rem 0.6rem 0; 
 }
 
 .buttons button:hover {
@@ -233,6 +234,11 @@
     padding: 0.2rem;
     position: relative;
     display: inline-block;
+    transition: transform 0.1s ease;
+}
+
+.add-container img:hover {
+    transform: scale(1.2);
 }
 
 .msgbox {
@@ -294,6 +300,12 @@ tbody tr:hover {
 
 li {
     cursor:pointer;
+    transition: transform 0.1s ease;
+}
+
+li:hover {
+    transform: scale(1.2);
+
 }
 
 .table-control-panel {

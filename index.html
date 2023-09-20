@@ -64,8 +64,8 @@
         <div class="table-control">
           <div class="table-selection">
             <div class="buttons">
-              <button class="btn-ocorrencia selected">Ocorrências</button>
-              <button class="btn-ocorrencia">Ocorrências Sociais</button>
+              <button class="btn-select btn-ocorrencia selected ">Ocorrências</button>
+              <button class="btn-select btn-ocorrencia">Ocorrências Sociais</button>
             </div>
           </div>
           <img class="divider-horz" src="assets/divider-horz.png" alt="">
@@ -151,9 +151,9 @@
     <div class="graph-container">
       <canvas id="myChart"></canvas>
       <div class="graph-control-panel">
-      <button onclick="updateChart(0)">OC Total</button>
-      <button onclick="updateChart(1)">OC Total Crítica</button>
-      <button onclick="updateChart(2)">Neut x Ñ Neut</button>
+      <button class="selected btn-select" onclick="updateChart(0)">OC Total</button>
+      <button class="btn-select" onclick="updateChart(1)">OC Total Crítica</button>
+      <button class="btn-select" onclick="updateChart(2)">Neut x Ñ Neut</button>
     </div>
     </div>
     <!-- End of Graph Section-->
