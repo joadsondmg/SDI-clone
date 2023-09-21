@@ -15,22 +15,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 })
 
-document.addEventListener('DOMContentLoaded', function(){
-  const buttons = document.querySelectorAll('.graph-control-panel button'); // Correção no seletor
-
-  buttons.forEach(function(button) {
-      button.addEventListener("click", function(e) {
-          // Remova a classe 'selected' de todos os links
-          buttons.forEach(function(otherButton) {
-              otherButton.classList.remove("selected");
-          });
-
-          // Adicione a classe 'selected' apenas ao link clicado
-          button.classList.add("selected");
-      });
-  });
-})
-
 
 var ctx = document.getElementById('myChart').getContext('2d');
 
@@ -90,5 +74,17 @@ var ctx = document.getElementById('myChart').getContext('2d');
       });
     }
 
+    function toggleDropdown() {
+      var dropdown = document.getElementById('dropdownOptions');
+      dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+  }
+
+  // Função para selecionar uma gerência
+  function selectGerencia(gerencia) {
+      toggleDropdown(); 
+      
+      document.querySelector('.selected.btn-select').innerText = 'Gerência ' + gerencia;
+      updateChart(0); // Atualiza o gráfico com os novos dados (dados da Gerência 1 por padrão)
+  }
     // Inicialmente, exibe o primeiro gráfico
     updateChart(0);
